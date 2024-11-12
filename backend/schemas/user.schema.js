@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 const schema=new mongoose.Schema({
     name:{
         type:String,
-        required:true,
+        // required:true,
     },
     email:{
         type:String,
@@ -15,7 +15,8 @@ const schema=new mongoose.Schema({
     },
     Phone:{
         type:Number,
-        required:true,
+        // required:true,
     }
 })
-module.exports=schema;
+const User = mongoose.model('User ',schema);
+module.exports = User;
